@@ -1,0 +1,12 @@
+# fly.toml app configuration file generated for blobfly on 2024-09-19T09:58:13-07:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'blobfly'
+primary_region = 'sjc'
+
+[build]
+
+[[vm]]
+  size = 'shared-cpu-1x'
