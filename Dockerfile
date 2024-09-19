@@ -15,7 +15,7 @@ COPY --from=docker.io/tailscale/tailscale:stable /usr/local/bin/tailscaled /app/
 COPY --from=docker.io/tailscale/tailscale:stable /usr/local/bin/tailscale /app/tailscale
 RUN mkdir -p /var/run/tailscale /var/cache/tailscale /var/lib/tailscale
 
-RUN ch
+
 
 # Run on container startup.
 CMD ["/app/tailscaled", "--state=/var/lib/tailscale/tailscaled.state", "--socket=/var/run/tailscale/tailscaled.sock", "&", "/app/tailscale", "up", "--authkey=$TAILSCALE_AUTHKEY", "--hostname=fly-app", "/app/my-app"]
