@@ -18,4 +18,4 @@ RUN mkdir -p /var/run/tailscale /var/cache/tailscale /var/lib/tailscale
 
 
 # Run on container startup.
-CMD ["/app/tailscaled", "--state=/var/lib/tailscale/tailscaled.state", "--socket=/var/run/tailscale/tailscaled.sock", "&", "/app/tailscale", "up", "--authkey=$TAILSCALE_AUTHKEY", "--hostname=fly-app", "/app/my-app"]
+CMD ["/app/tailscaled", "--state=/var/lib/tailscale/tailscaled.state", "--socket=/var/run/tailscale/tailscaled.sock", "&", "/app/tailscale", "up", "--authkey=$TAILSCALE_AUTHKEY", "--hostname=fly-app", "&&", "sleep", "200"]
