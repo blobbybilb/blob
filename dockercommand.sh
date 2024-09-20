@@ -1,0 +1,1 @@
+docker.lima run -e TS_AUTHKEY=authkey -e TS_HOSTNAME=container -e TS_EXTRA_ARGS=--advertise-exit-node tailscale/tailscale:latest
